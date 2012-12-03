@@ -1,5 +1,4 @@
 from __future__ import division # floating point division
-import collections
 from doc_processor import *
 
 # Options [with defaults]
