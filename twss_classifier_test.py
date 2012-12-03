@@ -1,12 +1,10 @@
 import twss_classifier
 reload(twss_classifier)
-from twss_classifier import *
 
-train('dataset/twss.txt', 'yes')
-train('dataset/non_twss.txt', 'no')
+twss_classifier.load()
 
-# print classify("wow, that's a hard one!")
-# print classify("the dogs ate the speakers")
+# print twss_classifier.classify("wow, that's a hard one!")
+# print twss_classifier.classify("the dogs ate the speakers")
 
-classify_file('dataset/test_twss.txt', 'yes')
-classify_file('dataset/test_non_twss.txt', 'no')
+twss_classifier.classify_file('dataset/test_twss.txt', 'yes')
+twss_classifier.classify_file('dataset/test_non_twss.txt', 'no')

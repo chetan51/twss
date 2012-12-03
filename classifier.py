@@ -20,6 +20,10 @@ model['samples']         = {}
 
 # Methods
 
+def load(new_model):
+  global model
+  model = new_model
+
 def train(item, classification):
   for feature in extract_features(item): add_sample(feature, classification)
   update_model(model, 'classifications', classification)
